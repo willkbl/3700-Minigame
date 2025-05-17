@@ -19,10 +19,17 @@ public class PlayerWriting : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            gmScript.isWriting = true;
-        } else
+            if (!gmScript.waitForSpaceRelease)
+            {
+                gmScript.isWriting = true;
+            }       
+        }
+        else
         {
             gmScript.isWriting = false;
+            gmScript.waitForSpaceRelease = false;
         }
     }
+
+    
 }
