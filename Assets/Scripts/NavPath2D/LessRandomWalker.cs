@@ -11,15 +11,31 @@ public class LessRandomWalker : MonoBehaviour
     public float speed = 1f;
     public float waypointTolerance = 1f;
     public List<GameObject> pathPrefabs;
+    public Transform target;
+    public float targetRadius;
+    private bool hasStopped = false; 
+    GameObject levelManager;
+    GameManagerScript gmScript;
 
     void Start()
     {
+        levelManager = GameObject.FindGameObjectWithTag("GameManager");
+        gmScript = levelManager.GetComponent<GameManagerScript>();
         LoadNewPath();
     }
 
     void Update()
     {
-        if (traversalWaypoints.Count == 0) return;
+        if(!hasStopped && target != null && Vector3.Distance(transform.position, target.position) <= targetRadius)
+        {
+            if (gmScript.isWriting)
+            {
+                hasStopped = true;
+                // teacher stops.
+                return; 
+            }
+        }
+        if(hasStopped || traversalWaypoints.Count == 0) return;
 
         Waypoint targetWaypoint = traversalWaypoints[currentWaypointIndex];
         Vector3 targetPosition = targetWaypoint.position;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomWalker : MonoBehaviour
 {
-        private Path currentPath;
+    private Path currentPath;
     private int currentWaypointIndex = -1;
     public float speed = 1f;
     public float waypointTolerance = 1f;
