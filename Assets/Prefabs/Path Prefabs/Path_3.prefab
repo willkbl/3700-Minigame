@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1133927977058709586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2969923184274968066}
+  - component: {fileID: 8328544420015158662}
+  m_Layer: 0
+  m_Name: Path_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2969923184274968066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133927977058709586}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.44543016, y: 1.3282233, z: -0.047671344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8328544420015158662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133927977058709586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b304a4cf041b54bb02d224dcbe12cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - position: {x: 1.3425786, y: 3.0325377, z: 0}
+    connectedWaypointsIndices: 
+  - position: {x: 3.138196, y: 3.062972, z: 0}
+    connectedWaypointsIndices: 02000000
+  - position: {x: 3.0468931, y: -1.9891031, z: 0}
+    connectedWaypointsIndices: 0100000003000000
+  - position: {x: 3.087418, y: -4.36716, z: 0}
+    connectedWaypointsIndices: 0200000004000000
+  - position: {x: 1.0898702, y: -4.41155, z: 0}
+    connectedWaypointsIndices: 0300000005000000
+  - position: {x: -0.9206394, y: -4.439833, z: 0}
+    connectedWaypointsIndices: 040000000600000006000000
+  - position: {x: -0.94869804, y: 0.5491555, z: 0}
+    connectedWaypointsIndices: 0500000007000000
+  - position: {x: -0.9486978, y: 3.1678247, z: 0}
+    connectedWaypointsIndices: 06000000
