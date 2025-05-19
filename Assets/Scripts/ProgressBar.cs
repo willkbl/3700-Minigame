@@ -27,6 +27,7 @@ public class ProgressBar : MonoBehaviour
             {
                 //note is done, finish writing and go back to main view
                 this.transform.localScale = new Vector3(0, 1, 1);
+                gameManagerScript.score++; //for now just add one, deal with scaling later
                 gameManagerScript.isWriting = false; //does this really work lmao least safe code ever
                 gameManagerScript.waitForSpaceRelease = true;
             }

@@ -1,10 +1,14 @@
 using UnityEngine;
+using Unity.UI;
+using TMPro;
 
 public class GameManagerScript : MonoBehaviour
 {
 
     public bool isWriting = false;
     public bool waitForSpaceRelease = false;
+    public TMP_Text scoreText;
+    public float score = 0; //public just so I can see it in the inspector
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +19,6 @@ public class GameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = "Notes written: " + score;
     }
 }
