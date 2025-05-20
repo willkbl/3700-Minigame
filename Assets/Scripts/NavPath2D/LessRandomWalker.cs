@@ -13,7 +13,8 @@ public class LessRandomWalker : MonoBehaviour
     public List<GameObject> pathPrefabs;
     public Transform target;
     public float targetRadius;
-    private bool hasStopped = false; 
+    private bool hasStopped = false;
+    public GameObject loseOverlay;
     GameObject levelManager;
     GameManagerScript gmScript;
 
@@ -22,6 +23,7 @@ public class LessRandomWalker : MonoBehaviour
         levelManager = GameObject.FindGameObjectWithTag("GameManager");
         gmScript = levelManager.GetComponent<GameManagerScript>();
         LoadNewPath();
+        loseOverlay.SetActive(false);
     }
 
     void Update()
@@ -31,6 +33,9 @@ public class LessRandomWalker : MonoBehaviour
             if (gmScript.isWriting)
             {
                 hasStopped = true;
+                gmScript.isWriting = false;
+                loseOverlay.SetActive(true);
+                gmScript.gameOver = true;
                 // teacher stops.
                 return; 
             }

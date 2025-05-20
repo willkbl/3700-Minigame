@@ -18,7 +18,7 @@ public class CameraSwitcherScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gmScript.isWriting)
+        if (gmScript.isWriting && !gmScript.gameOver)
         {
             writingCamera.GetComponent<Camera>().depth = 5;
         } else
