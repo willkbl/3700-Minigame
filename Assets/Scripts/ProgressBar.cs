@@ -3,7 +3,7 @@ using UnityEngine;
 public class ProgressBar : MonoBehaviour
 {
 
-    public float secondsPerLine = 5f;
+    public float secondsPerLine = 25f;
 
     private GameObject gameManager;
     private GameManagerScript gameManagerScript;

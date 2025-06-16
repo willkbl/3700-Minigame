@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class SubProgressBar : MonoBehaviour
 {
 
-    public float secondsPerLine = 1f; //manually set this to total note time / number of lines
+    public float secondsPerLine = 5f; //manually set this to total note time / number of lines
 
     private GameObject gameManager;
     private GameManagerScript gameManagerScript;
